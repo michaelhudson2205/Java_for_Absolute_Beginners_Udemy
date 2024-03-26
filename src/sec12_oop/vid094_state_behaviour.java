@@ -3,14 +3,16 @@ package sec12_oop;
 public class vid094_state_behaviour {
     public static void main(String[] args) {
         Door dd = new Door();
+        dd.name = "Driver";
         dd.open();
+        dd.printStatus();
 
-        if (dd.isOpen) {
-            System.out.println("Driver's door is open.");
-        }
-        else {
-            System.out.println("Driver's door is closed.");
-        }
-
+        Door pd = new Door();
+        pd.name = "Passenger";
+        pd.printStatus();
+        pd.open();
+        pd.printStatus();
+        dd.close();
+        dd.printStatus();
     }
 }
